@@ -1,0 +1,12 @@
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\bin\Debug\netcoreapp3.1\SB.Abstraction.deps.json
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\bin\Debug\netcoreapp3.1\SB.Abstraction.dll
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.csprojAssemblyReference.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.AssemblyInfoInputs.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.AssemblyInfo.cs
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\bin\Debug\netcoreapp3.1\SB.Abstraction.pdb
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\bin\Debug\netcoreapp3.1\SB.Abstraction.Contract.dll
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\bin\Debug\netcoreapp3.1\SB.Abstraction.Contract.pdb
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.csproj.CoreCompileInputs.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.csproj.CopyComplete
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.dll
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction\obj\Debug\netcoreapp3.1\SB.Abstraction.pdb
