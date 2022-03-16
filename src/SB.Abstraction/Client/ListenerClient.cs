@@ -17,7 +17,7 @@ namespace SB.Abstraction.Client
         private string queue;
         private string subs;
 
-        public ListenerClient(AzureSB.ServiceBusClient client, string nameTopic = "", string nameSubscription = "")
+        public ListenerClient(AzureSB.ServiceBusClient client, string nameTopic , string nameSubscription )
         {
             this.client = client;
             this.queue = nameTopic;
@@ -38,7 +38,6 @@ namespace SB.Abstraction.Client
         }
         private Task ErrorHandler(AzureSB.ProcessErrorEventArgs args)
         {
-            Console.WriteLine(args.Exception.ToString());
             return Task.CompletedTask;
         }
         public async void Run(Action<IMessage> callback)
