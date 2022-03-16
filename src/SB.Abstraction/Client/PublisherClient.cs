@@ -12,25 +12,23 @@ namespace SB.Abstraction
     {
         public AzureSB.ServiceBusClient client { get; set; }
         private AzureSB.ServiceBusSender sender;
-        private string queue;
-        public PublisherClient(AzureSB.ServiceBusClient client,string nameQueue= "")
+        private string topic;
+        private string subs;
+        public PublisherClient(AzureSB.ServiceBusClient client,string nameTopic= "",string nameSubscription = "")
         {
             this.client= client;
-            queue = nameQueue;
+            topic = nameTopic;
+            subs = nameSubscription;
             LoadSender();
-
         }
         private void LoadSender()
         {
-            sender = client.CreateSender(queue);
-
+            sender = client.CreateSender(topic);
         }
         public async void SendAsync(dynamic message)
-        {
-            
+        {            
             string jsonMessage = JsonSerializer.Serialize(message);
-            await sender.SendMessageAsync(new ServiceBusMessage(jsonMessage));
-            
+            await sender.SendMessageAsync(new ServiceBusMessage(jsonMessage));            
         }
     }
 }

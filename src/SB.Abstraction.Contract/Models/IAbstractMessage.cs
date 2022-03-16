@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SB.Abstraction.Contract.Models
 {
-    interface IAbstractMessage
+    public interface IAbstractMessage
     {
         Guid Id { get; }
     }

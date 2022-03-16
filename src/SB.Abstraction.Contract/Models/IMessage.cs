@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SB.Abstraction.Contract.Models
 {
-    interface IMessage : IAbstractMessage
+    public interface IMessage : IAbstractMessage
     {
         dynamic Value { get; }
     }
