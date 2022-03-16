@@ -1,7 +1,10 @@
 ﻿using SB.Abstraction.Contract.Client;
+using SB.Abstraction.Contract.Models;
+using SB.Abstraction.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using AzureSB = Azure.Messaging.ServiceBus;
 
 namespace SB.Abstraction.Client
@@ -9,23 +12,39 @@ namespace SB.Abstraction.Client
     public class ListenerClient : IListener
     {
         private AzureSB.ServiceBusClient client;
+        static AzureSB.ServiceBusProcessor processor;
+        private Action<IMessage> callback;
         private string queue;
+        private string subs;
 
-        public ListenerClient(AzureSB.ServiceBusClient client, string nameQueue="")
+        public ListenerClient(AzureSB.ServiceBusClient client, string nameTopic = "", string nameSubscription = "")
         {
             this.client = client;
-            this.queue = nameQueue;
-           
+            this.queue = nameTopic;
+            subs = nameSubscription;
+            LoadProcessor();
         }
-
-        public void OnDataRecived()
+        private void LoadProcessor()
         {
-            throw new NotImplementedException();
+            processor = client.CreateProcessor(queue, subs, new AzureSB.ServiceBusProcessorOptions());
+            processor.ProcessMessageAsync += MessageHandler;
+            processor.ProcessErrorAsync += ErrorHandler;
         }
-
-        public void Run()
+        private async Task MessageHandler(AzureSB.ProcessMessageEventArgs args)
         {
-            throw new NotImplementedException();
+            string body = args.Message.Body.ToString();
+            IMessage message = new SBMessage() { Id = new Guid(args.Message.MessageId), Value = body };
+            callback(message);
+        }
+        private Task ErrorHandler(AzureSB.ProcessErrorEventArgs args)
+        {
+            Console.WriteLine(args.Exception.ToString());
+            return Task.CompletedTask;
+        }
+        public async void Run(Action<IMessage> callback)
+        {
+            this.callback = callback;
+            await processor.StartProcessingAsync();
         }
     }
 }

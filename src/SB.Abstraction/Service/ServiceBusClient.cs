@@ -35,15 +35,15 @@ namespace SB.Abstraction
         private IClient CreateClients(dynamic option)
         {
             IClient busClient;
-            if (option._type == PUBLISHER) busClient = new PublisherClient(client);
-            else busClient = new ListenerClient(client);
+            if (option._type == PUBLISHER) busClient = new PublisherClient(client, option._nameQueue, config.Subscription);
+            else busClient = new ListenerClient(client, option._nameQueue, config.Subscription);
             return busClient;
         }
         #endregion
         public IListener GetListener(string topicName = "")
         {
             string properTopicName = topicName ?? config.Topic;
-            IListener listener = (IListener)CreateClients(new { _type = LISTENER, _client = client, _nameQueue = properTopicName });
+            IListener listener = (IListener)CreateClients(new { _type = LISTENER, _client = client, _nameQueue = properTopicName, _nameSubs = config.Subscription });
             return listener;
         }
         public IPublisher GetPublisher(string topicName = "")
