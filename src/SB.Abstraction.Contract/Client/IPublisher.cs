@@ -4,8 +4,8 @@ using System.Text;
 
 namespace SB.Abstraction.Contract.Client
 {
-    interface IPublisher
+    public interface IPublisher:IClient
     {
-        void Send(dynamic message);
+        void SendAsync(dynamic message);
     }
 }

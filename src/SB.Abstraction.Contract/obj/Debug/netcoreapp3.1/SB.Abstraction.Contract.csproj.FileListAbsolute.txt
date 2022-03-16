@@ -7,3 +7,12 @@ C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction.Contract\obj
 C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.csproj.CoreCompileInputs.cache
 C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.dll
 C:\ERNI\Git\Services\assets-cloud-sb-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.pdb
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\bin\Debug\netcoreapp3.1\SB.Abstraction.Contract.deps.json
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\bin\Debug\netcoreapp3.1\SB.Abstraction.Contract.dll
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\bin\Debug\netcoreapp3.1\SB.Abstraction.Contract.pdb
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.csprojAssemblyReference.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.AssemblyInfoInputs.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.AssemblyInfo.cs
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.csproj.CoreCompileInputs.cache
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.dll
+C:\ERNI\Git\Services\assets-cloud-sb-abstraction\assets-cloud-servicebus-abstraction\src\SB.Abstraction.Contract\obj\Debug\netcoreapp3.1\SB.Abstraction.Contract.pdb

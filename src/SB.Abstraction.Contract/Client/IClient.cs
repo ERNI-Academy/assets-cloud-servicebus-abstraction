@@ -4,9 +4,7 @@ using System.Text;
 
 namespace SB.Abstraction.Contract.Client
 {
-    public interface IListener:IClient
+    public interface IClient
     {
-        void OnDataRecived();
-        void Run();
     }
 }
