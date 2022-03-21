@@ -4,6 +4,7 @@ using SB.Abstraction.Contract.Client;
 using System;
 using SB.Abstraction;
 using SB.Abstraction.Config;
+using SB.Abstraction.Model;
 
 namespace SB.UsageSamples
 {
@@ -28,7 +29,7 @@ namespace SB.UsageSamples
             IPublisher publisher = service.GetPublisher("assetsample");
             for (int i = 0; i < 20; i++)
             {
-                publisher.SendAsync(new { prop1 = i.ToString(), prop2 = "2" }); ;
+                publisher.SendAsync(new SBMessage() {  Id = Guid.NewGuid(), Value = "2" }); ;
 
                 System.Threading.Thread.Sleep(100);
             }
