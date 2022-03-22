@@ -6,6 +6,6 @@ namespace SB.Abstraction.Contract.Models
 {
     public interface IAbstractMessage
     {
-        Guid Id { get; }
+        Guid Key { get; }
     }
 }

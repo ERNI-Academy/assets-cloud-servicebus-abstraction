@@ -4,6 +4,7 @@ using SB.Abstraction.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using AzureSB = Azure.Messaging.ServiceBus;
 
@@ -17,7 +18,7 @@ namespace SB.Abstraction.Client
         private string queue;
         private string subs;
 
-        public ListenerClient(AzureSB.ServiceBusClient client, string nameTopic = "", string nameSubscription = "")
+        public ListenerClient(AzureSB.ServiceBusClient client, string nameTopic, string nameSubscription)
         {
             this.client = client;
             this.queue = nameTopic;
@@ -32,13 +33,15 @@ namespace SB.Abstraction.Client
         }
         private async Task MessageHandler(AzureSB.ProcessMessageEventArgs args)
         {
+
             string body = args.Message.Body.ToString();
-            IMessage message = new SBMessage() { Id = new Guid(args.Message.MessageId), Value = body };
+            var z = JsonSerializer.Serialize(body);
+            IMessage message = new SBMessage() { Key = new Guid(args.Message.MessageId), Value = z };
+
             callback(message);
         }
         private Task ErrorHandler(AzureSB.ProcessErrorEventArgs args)
         {
-            Console.WriteLine(args.Exception.ToString());
             return Task.CompletedTask;
         }
         public async void Run(Action<IMessage> callback)

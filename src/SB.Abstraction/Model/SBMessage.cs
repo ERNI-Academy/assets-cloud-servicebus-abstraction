@@ -9,8 +9,8 @@ namespace SB.Abstraction.Model
     public class SBMessage : IMessage
     {
         public dynamic Value { get; set; }
+        public Guid Key { get; set; }    
 
-        public Guid Id { get; set; }
         public override string ToString()
         {
             return JsonSerializer.Serialize(this);
