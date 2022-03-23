@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
+using SB.Abstraction.Contract.Models;
 
 namespace SB.Abstraction
 {
@@ -14,9 +15,9 @@ namespace SB.Abstraction
         private AzureSB.ServiceBusSender sender;
         private string topic;
         private string subs;
-        public PublisherClient(AzureSB.ServiceBusClient client,string nameTopic= "",string nameSubscription = "")
+        public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic, string nameSubscription)
         {
-            this.client= client;
+            this.client = client;
             topic = nameTopic;
             subs = nameSubscription;
             LoadSender();
@@ -25,10 +26,10 @@ namespace SB.Abstraction
         {
             sender = client.CreateSender(topic);
         }
-        public async void SendAsync(dynamic message)
-        {            
+        public async void SendAsync(IMessage message)
+        {
             string jsonMessage = JsonSerializer.Serialize(message);
-            await sender.SendMessageAsync(new ServiceBusMessage(jsonMessage));            
+            await sender.SendMessageAsync(new ServiceBusMessage(jsonMessage));
         }
     }
 }
