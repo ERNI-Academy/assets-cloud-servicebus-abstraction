@@ -28,7 +28,6 @@ namespace SB.Abstraction
         }
         public async void SendAsync(IMessage message)
         {
-
             string jsonMessage = JsonSerializer.Serialize(message);
             await sender.SendMessageAsync(new ServiceBusMessage(jsonMessage));
         }

@@ -35,8 +35,8 @@ namespace SB.Abstraction.Client
         {
 
             string body = args.Message.Body.ToString();
-            var z = JsonSerializer.Serialize(body);
-            IMessage message = new SBMessage() { Key = new Guid(args.Message.MessageId), Value = z };
+            var serialized = JsonSerializer.Serialize(body);
+            IMessage message = new SBMessage() { Key = new Guid(args.Message.MessageId), Value = serialized };
 
             callback(message);
         }
