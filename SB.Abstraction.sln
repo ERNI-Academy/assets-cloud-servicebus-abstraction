@@ -19,6 +19,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19BD40F6-AE47-44DE-A422-2B604148AF61}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3281CB25-40C0-4306-91CF-38CC7295326D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\sonarcloud.yml = .github\workflows\sonarcloud.yml
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB.Abstraction", "src\SB.Abstraction\SB.Abstraction.csproj", "{C7CC318A-3F87-4BB1-BF4D-4CB151954655}"
 EndProject
