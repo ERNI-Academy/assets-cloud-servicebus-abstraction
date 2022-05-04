@@ -8,27 +8,17 @@ namespace SB.Abstraction
 {
     public class ServiceBusClient : ISBServiceClient
     {
-        private AzureSB.ServiceBusClient client;
-        private AzureSB.ServiceBusSender sender;
-        private AzureSB.ServiceBusReceiver listener;
+        private readonly AzureSB.ServiceBusClient client;
         private const string PUBLISHER = "pub";
         private const string LISTENER = "lis";
         private readonly ISBConfig config;
         public ServiceBusClient(ISBConfig options)
         {
             config = options;
-            LoadConfig();
+            client = new AzureSB.ServiceBusClient(config.ConnectionString);
         }
-        #region Internal methods
-        private bool IsServiceBusAccountRunning()
-        {
-            return client != null || !client.IsClosed;
-        }
-        private void LoadConfig()
-        {
-            if (!IsServiceBusAccountRunning()) client = new AzureSB.ServiceBusClient(config.ConnectionString);
 
-        }
+        #region Internal methods
         private IClient CreateClients(dynamic option)
         {
             IClient busClient;
@@ -37,12 +27,14 @@ namespace SB.Abstraction
             return busClient;
         }
         #endregion
+
         public IListener GetListener(string topicName = "")
         {
             string properTopicName = topicName ?? config.Topic;
             IListener listener = (IListener)CreateClients(new { _type = LISTENER, _client = client, _nameQueue = properTopicName, _nameSubs = config.Subscription });
             return listener;
         }
+
         public IPublisher GetPublisher(string topicName = "")
         {
             string properTopicName = topicName ?? config.Topic;
