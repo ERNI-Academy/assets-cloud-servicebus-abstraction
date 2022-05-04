@@ -1,9 +1,6 @@
 ﻿using Azure.Messaging.ServiceBus;
 using SB.Abstraction.Contract.Client;
 using AzureSB = Azure.Messaging.ServiceBus;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json;
 using SB.Abstraction.Contract.Models;
 
@@ -11,21 +8,21 @@ namespace SB.Abstraction
 {
     public class PublisherClient : IPublisher
     {
-        public AzureSB.ServiceBusClient client { get; set; }
+        private readonly AzureSB.ServiceBusClient client;
         private AzureSB.ServiceBusSender sender;
-        private string topic;
-        private string subs;
-        public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic, string nameSubscription)
+        private readonly string topic;
+        public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic)
         {
             this.client = client;
             topic = nameTopic;
-            subs = nameSubscription;
             LoadSender();
         }
+
         private void LoadSender()
         {
             sender = client.CreateSender(topic);
         }
+
         public async void SendAsync(IMessage message)
         {
             string jsonMessage = JsonSerializer.Serialize(message);

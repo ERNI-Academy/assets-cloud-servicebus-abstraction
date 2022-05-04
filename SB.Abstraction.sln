@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{DDC0771C-E314-4010-9201-FC7B16D22E8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{DB27836F-E9D5-4A8D-AFEE-3ABD23538E52}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		AUTHORS.md = AUTHORS.md
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{19BD40F6-AE47-44DE-A422-2B604148AF61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3281CB25-40C0-4306-91CF-38CC7295326D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\sonarcloud.yml = .github\workflows\sonarcloud.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB.Abstraction", "src\SB.Abstraction\SB.Abstraction.csproj", "{C7CC318A-3F87-4BB1-BF4D-4CB151954655}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB.Abstraction.Contract", "src\SB.Abstraction.Contract\SB.Abstraction.Contract.csproj", "{59A75230-0398-4C5C-8E90-CBF6929AF9C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB.UsageSamples", "src\SB.UsageSamples\SB.UsageSamples.csproj", "{0AF73C39-6E41-4F36-8448-192EC4D98CEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7CC318A-3F87-4BB1-BF4D-4CB151954655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7CC318A-3F87-4BB1-BF4D-4CB151954655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7CC318A-3F87-4BB1-BF4D-4CB151954655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7CC318A-3F87-4BB1-BF4D-4CB151954655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59A75230-0398-4C5C-8E90-CBF6929AF9C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59A75230-0398-4C5C-8E90-CBF6929AF9C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59A75230-0398-4C5C-8E90-CBF6929AF9C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59A75230-0398-4C5C-8E90-CBF6929AF9C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF73C39-6E41-4F36-8448-192EC4D98CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF73C39-6E41-4F36-8448-192EC4D98CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF73C39-6E41-4F36-8448-192EC4D98CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF73C39-6E41-4F36-8448-192EC4D98CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3281CB25-40C0-4306-91CF-38CC7295326D} = {DDC0771C-E314-4010-9201-FC7B16D22E8B}
+		{C7CC318A-3F87-4BB1-BF4D-4CB151954655} = {19BD40F6-AE47-44DE-A422-2B604148AF61}
+		{59A75230-0398-4C5C-8E90-CBF6929AF9C3} = {19BD40F6-AE47-44DE-A422-2B604148AF61}
+		{0AF73C39-6E41-4F36-8448-192EC4D98CEC} = {19BD40F6-AE47-44DE-A422-2B604148AF61}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B7F54DD-2622-4811-837E-38FEB854C95C}
+	EndGlobalSection
+EndGlobal
