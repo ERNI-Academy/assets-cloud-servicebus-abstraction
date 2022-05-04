@@ -8,10 +8,10 @@ namespace SB.Abstraction
 {
     public class PublisherClient : IPublisher
     {
-        public AzureSB.ServiceBusClient client { get; set; }
+        private readonly AzureSB.ServiceBusClient client;
         private AzureSB.ServiceBusSender sender;
-        private string topic;
-        private string subs;
+        private readonly string topic;
+        private readonly string subs;
         public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic, string nameSubscription)
         {
             this.client = client;
@@ -19,10 +19,12 @@ namespace SB.Abstraction
             subs = nameSubscription;
             LoadSender();
         }
+
         private void LoadSender()
         {
             sender = client.CreateSender(topic);
         }
+
         public async void SendAsync(IMessage message)
         {
             string jsonMessage = JsonSerializer.Serialize(message);

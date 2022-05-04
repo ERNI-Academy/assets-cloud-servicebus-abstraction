@@ -13,7 +13,7 @@ namespace SB.Abstraction
         private AzureSB.ServiceBusReceiver listener;
         private const string PUBLISHER = "pub";
         private const string LISTENER = "lis";
-        private ISBConfig config;
+        private readonly ISBConfig config;
         public ServiceBusClient(ISBConfig options)
         {
             config = options;
