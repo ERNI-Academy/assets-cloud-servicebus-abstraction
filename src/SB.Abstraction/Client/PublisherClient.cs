@@ -11,12 +11,10 @@ namespace SB.Abstraction
         private readonly AzureSB.ServiceBusClient client;
         private AzureSB.ServiceBusSender sender;
         private readonly string topic;
-        private readonly string subs;
-        public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic, string nameSubscription)
+        public PublisherClient(AzureSB.ServiceBusClient client, string nameTopic)
         {
             this.client = client;
             topic = nameTopic;
-            subs = nameSubscription;
             LoadSender();
         }
 

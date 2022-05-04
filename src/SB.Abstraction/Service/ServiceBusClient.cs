@@ -22,7 +22,7 @@ namespace SB.Abstraction
         private IClient CreateClients(dynamic option)
         {
             IClient busClient;
-            if (option._type == PUBLISHER) busClient = new PublisherClient(client, option._nameQueue, config.Subscription);
+            if (option._type == PUBLISHER) busClient = new PublisherClient(client, option._nameQueue);
             else busClient = new ListenerClient(client, option._nameQueue, config.Subscription);
             return busClient;
         }
