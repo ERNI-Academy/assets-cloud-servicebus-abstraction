@@ -22,7 +22,7 @@ namespace SB.Abstraction
         #region Internal methods
         private bool IsServiceBusAccountRunning()
         {
-            return client != null || (client != null && !client.IsClosed);
+            return client != null || !client.IsClosed;
         }
         private void LoadConfig()
         {
