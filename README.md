@@ -130,8 +130,6 @@ The ServiceBusClient is the services that will create the proper clients( listen
 
 - To find the correct connectionstring you should go to azure portal -> ServiceBus account -> Shared access policies and there , choose the **primary key**
 
-![connectionstring](connectionstring.JPG)
-
 ### Create Listener Client
 
 The listener client is an artifact that bring you the capability to be connected on streaming to the concrete subscription.Once you add a callback to this artifact, your software received all messages sent it to the Topic related with the subscription configured.

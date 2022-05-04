@@ -10,7 +10,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".sln", ".sln", "{DB27836F-E
 		.gitignore = .gitignore
 		AUTHORS.md = AUTHORS.md
 		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
-		connectionstring.JPG = connectionstring.JPG
 		CONTRIBUTING.md = CONTRIBUTING.md
 		LICENSE = LICENSE
 		README.md = README.md
