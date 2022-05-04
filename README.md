@@ -43,6 +43,11 @@ On next releases, we transform the solution into nuget.
 At this point, it is possible to use that asset:
 
 - Cloning the repo and use it directly on you solution. On this way, you will have access too entire code.
+
+```sh
+git clone https://github.com/ERNI-Academy/assets-cloud-servicebus-abstraction.git
+```
+
 - Using the dll located on Release folder
 
 ## Notes
@@ -125,7 +130,7 @@ The ServiceBusClient is the services that will create the proper clients( listen
 
 - To find the correct connectionstring you should go to azure portal -> ServiceBus account -> Shared access policies and there , choose the **primary key**
 
-![connectionstring](connectionstring.jpg)
+![connectionstring](connectionstring.JPG)
 
 ### Create Listener Client
 
