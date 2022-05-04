@@ -2,9 +2,6 @@
 using SB.Abstraction.Config;
 using SB.Abstraction.Contract;
 using SB.Abstraction.Contract.Client;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using AzureSB = Azure.Messaging.ServiceBus;
 
 namespace SB.Abstraction

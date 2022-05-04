@@ -2,8 +2,6 @@
 using SB.Abstraction.Contract.Models;
 using SB.Abstraction.Model;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using AzureSB = Azure.Messaging.ServiceBus;

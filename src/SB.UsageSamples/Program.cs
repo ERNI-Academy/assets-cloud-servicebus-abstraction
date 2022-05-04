@@ -1,5 +1,4 @@
-﻿using AzureSB = Azure.Messaging.ServiceBus;
-using SB.Abstraction.Contract;
+﻿using SB.Abstraction.Contract;
 using SB.Abstraction.Contract.Client;
 using System;
 using SB.Abstraction;
@@ -15,9 +14,9 @@ namespace SB.UsageSamples
             Console.WriteLine("Create Listener");
             ISBServiceClient service = new ServiceBusClient(new SBConfig()
             {
-                ConnectionString = "Endpoint=sb://sbasset.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=+lS3xJGQRsMeucKYHt2SG08VhRGCLZA++CqJm7lhlrQ=",
-                Topic = "assetsample",
-                Subscription = "assetsubs"
+                ConnectionString = "[your service bus connection string]",
+                Topic = "[your service bus topic name]",
+                Subscription = "[your service bus subscription name]"
             });
 
             ///Create a listener
