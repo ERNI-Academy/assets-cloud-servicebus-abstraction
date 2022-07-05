@@ -10,24 +10,5 @@
   "repoHost": "https://github.com",
   "skipCi": true,
   "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors)",
-  "contributors": [
-    {
-      "login": "mdelgadodiaz83-erni",
-      "name": "mdelgadodiaz83-erni",
-      "avatar_url": "https://avatars.githubusercontent.com/u/85220317?v=4",
-      "profile": "https://github.com/mdelgadodiaz83-erni",
-      "contributions": [
-        "code",
-        "content",
-        "doc",
-        "design",
-        "ideas",
-        "maintenance",
-        "test",
-        "example",
-        "review"
-      ]
-    }
-  ],
-  "projectName": "assets-cloud-servicebus-abstraction"
+  "contributors": []
 }
