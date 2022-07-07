@@ -1,5 +1,31 @@
 # About
 
+Azure Service Bus is a fully managed enterprise message broker with message queues and publish-subscribe topics (in a namespace). Service Bus is used to decouple applications and services from each other, providing the following benefits:
+
+- Load-balancing work across competing workers
+- Safely routing and transferring data and control across service and application boundaries
+- Coordinating transactional work that requires a high-degree of reliability
+
+Some common messaging scenarios are:
+
+- **Messaging**. Transfer business data, such as sales or purchase orders, journals, or inventory movements.
+
+- **Decouple applications**. Improve reliability and scalability of applications and services. Producer and consumer don't have to be online or readily available at the same time. The load is leveled such that traffic spikes don't overtax a service.
+
+- **Load balancing**. Allow for multiple competing consumers to read from a queue at the same time, each safely obtaining exclusive ownership to specific messages.
+
+- **Topics and subscriptions**. Enable 1:n relationships between publishers and subscribers, allowing subscribers to select particular messages from a published message stream.
+
+- **Transactions**. Allows you to do several operations, all in the scope of an atomic transaction. For example, the following operations can be done in the scope of a transaction.
+
+    - Obtain a message from one queue.
+    -  Post results of processing to one or more different queues.
+    -   Move the input message from the original queue.
+
+The results become visible to downstream consumers only upon success, including the successful settlement of input message, allowing for once-only processing semantics. This transaction model is a robust foundation for the compensating transactions pattern in the greater solution context.
+
+- **Message sessions**. Implement high-scale coordination of workflows and multiplexed transfers that require strict message ordering or message deferral.
+
 **Service Bus Topic/Subscriptions Abstraction** is a small dll ( on the next iteration, it will be a nuget package) that provides a robust and reusable implementations.
 
 the main focus of this dll is add the publish and listener features to your owns projects.
